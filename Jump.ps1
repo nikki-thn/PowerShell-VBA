@@ -123,41 +123,7 @@ $button14.AutoSize = $true
 $Form.Controls.Add($button14)
 
 #ALIAS FUNCTIONS
-function Open-Model  {
-     Invoke-Item -Path "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\ClientOverview\WRPages\Model.docx" 
-}
-function Open-Modelset  {
-     Invoke-Item -Path "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\ClientOverview\WRPages\Modelset.docx" 
-}
-function Open-THH-Models {
-     Invoke-Item -Path "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\BoardBook\WRPages\SubTHH_Model.docx"
-     Invoke-Item -Path "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\BoardBook\WRPages\THH_Model.docx"
-}
-function Open-THH-Modelsets {
-     Invoke-Item -Path "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\BoardBook\WRPages\SubTHH_Modelset.docx"
-     Invoke-Item -Path "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\BoardBook\WRPages\THH_Modelset.docx"
-}
-function Open-DEV {
-     Invoke-Item "\\CGSWVINVAPPD1\PagesShare\PagesNetwork\Docs\ClientServices67_DEV_Support"
-}
-function Open-Archive {
-     Invoke-Item "\\Mlisinvwpordbp1\amdrarchive"
-}
-function Open-CRTemplates {
-     Invoke-Item "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\ClientOverview"
-}
-function Open-BBTemplates {
-     Invoke-Item "\\cgswvinvappd1\PagesShare\PagesNetwork\ClientServices67_DEV_Support\BoardBook"
-}
-function Open-AMDR-DEV {
-     Invoke-Item "\\Cgswpinvamdd01\amdrinput\INPUT2"
-}
-function Open-H {
-     Invoke-Item "H:\\"
-}
-function Open-Feedfiles{
-     Invoke-Item "H:\Documents\Pages\Feed Files"
-}
+#Please replace with alias functions
 
 #Event Handler Button on-click
 $button00.Add_Click({Open-Model})
