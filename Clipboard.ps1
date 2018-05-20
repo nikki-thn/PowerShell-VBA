@@ -9,6 +9,8 @@ Features to work on:
 Enable previous button at end of file
 #>
 
+
+
 $filename = $Args[0] #set filename to user input parameter
 $fileExt=[System.IO.Path]::GetExtension($filename) #get the input file type
 
@@ -36,7 +38,10 @@ catch {
 	exit 2
 }
 
-$global:i = 0
+$global:i = 0 #count variale
+
+Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Drawing
 
 #create window form
 $Form = New-Object system.Windows.Forms.Form
@@ -93,8 +98,6 @@ function Next-to-clipboard {
             $Form.Controls.Add($prevbtn)
         }
 
-        Write-host $global:i
-
         #set text to clipboard
         $items | where-object {$_.Index -eq $global:i} | select -Unique -ExpandProperty Value | clip
 
@@ -103,23 +106,24 @@ function Next-to-clipboard {
         $global:i++ # increment i for next reading
     }
     else {
-        $clipboardItem.Text = "This is the end of file. Bye ヾ(＾-＾)ノ"
-        $clipboardItem.ForeColor = "Red"
+        $clipboardItem.Text = "This is the end of file. Bye ヾ( ＾ - ＾ )ノ"
+        $clipboardItem.ForeColor = "Yellow"
         $Form.Controls.Remove($prevbtn)
         $Form.Controls.Remove($nextbtn)
+        $button.Text = "Close" 
+        $form.CancelButton = $button
+        $button.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+        $form.Controls.Add($button)
     }
 } 
 
 function Previous-to-Clipboard { 
     
     $global:i -= 2 # increment i for next reading
-    Write-host $global:i
 
     while ($global:i -lt 0) {
         $global:i = 0
 
-        write-host "here"
-            
         #set text to clipboard
         $items | where-object {$_.Index -eq 0} | select -Unique -ExpandProperty Value | clip
 
@@ -132,8 +136,7 @@ function Previous-to-Clipboard {
 
     #change the label to current clipboard text
     $clipboardItem.Text = [Windows.Forms.Clipboard]::GetText()
-    $global:i++
-        
+    $global:i++      
 }
 
 
