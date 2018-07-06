@@ -177,13 +177,10 @@ Private Function ConcatSQLQuery(dateStr As String) As String
     Dim SQLStr1 As String 'To store first half of the store procedure
     Dim SQLStr2 As String 'To store second half of the store precedure
 
-    SQLStr1 = "SELECT distinct sec.security_id, Sec.portia_id_bk FROM core.Holdings_F hld INNER JOIN core.Security_D2 sec ON hld.security_id = sec.security_id INNER JOIN core.Portfolio_D2 por ON por.port_id = hld.port_id INNER JOIN core.Time_D tim ON tim.time_id = hld.effective_date_id WHERE por.expiry_dt Is Null AND tim.cal_date_bk = '"
-'    SQLStr1 = SQLStr1 & vbCrLf & "  DECLARE @asOfDate DATETIME"
-'    SQLStr1 = SQLStr1 & vbCrLf & "  SET QUOTED_IDENTIFIER OFF" & vbCrLf & "BEGIN"
-'    SQLStr1 = SQLStr1 & vbCrLf & "  SET NOCOUNT ON"
-'    SQLStr1 = SQLStr1 & vbCrLf & "  SET XACT_ABORT OFF" & vbCrLf
+SQLStr1 = "sql query"
+
           
-    SQLStr2 = "' AND (por.short_name_bk Like 'TOR%' OR por.short_name_bk Like 'BOS%' or por.short_name_bk Like 'DMR%' or por.short_name_bk Like 'LON%')"
+SQLStr2 = "sql query"
        
     'MsgBox (SQLStr1 & dateStr & SQLStr2)
     'Read in sql script
