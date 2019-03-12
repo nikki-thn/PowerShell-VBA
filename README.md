@@ -1,5 +1,5 @@
 # PowerShell-VBA
-Powershsell scripts & VBA codes
+Powershell scripts & VBA codes
 
 
 
