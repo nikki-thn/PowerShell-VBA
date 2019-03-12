@@ -74,18 +74,13 @@ On Error GoTo ErrHandler
     Set MItem = OutlookApp.CreateItem(olMailItem)
     
     'Set recipients
-    recipients = "sjoseph@manulifeam.com; Fei_ZhaoLiu@manulifeam.com; "
-    recipients = recipients & "Neha_Arora@manulife.com; KSouza@manulifeam.com; " 'KFidelia@manulifeam.com;
-    recipients = recipients & "Jose_Luis_Enriquez@manulifeam.com; SMink@manulifeam.com; Vera_Arkhipova@manulife.com; "
-    recipients = recipients & "MFeetham@manulifeam.com; Ldavuluri@manulifeam.com; Van_Luong@manulifeam.com; "
-    recipients = recipients & "Katalin_Szabados@manulife.com; bessy_stamatis@manulife.com; Andy_Lamberti@manulife.com; "
-    recipients = recipients & "Fernando_Lovo@manulife.com; JWatches@manulifeam.com; AProctor@manulifeam.com; "
-    recipients = recipients & "SinSiew_Tan@manulifeam.com; Curtis_WY_So@manulifeam.com; "
-    recipients = recipients & "MAMClientReporting@manulifeam.com; Maurizio_Danieli@manulife.com"
+     recipients = "email@meial.com"
+     recipients = recipients & "djdjd@jfjf.com " ;
+
+
     
     'Set CC recipients
-    ccRecipients = "AMS_PARS_SUPPORT@manulife.com; GSD_Appway_Support@manulife.com; gsd_cr_support@manulife.com; "
-    ccRecipients = ccRecipients & "Hong_Van_Le@manulife.com; GSD_CR_Support_Offshore@manulife.com"
+     ccRecipients = "ejej@jejd.com "
 
     'Set email bosy message
     bodyMsg = "<span style='font-size:11pt'>Hi Team, <br><br> Below is a summary of the requests that are in progress. Please reach out to us if you have any issues/concerns.</span><br><br><br>"
