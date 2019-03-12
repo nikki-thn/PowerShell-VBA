@@ -1,6 +1,6 @@
 # QuikNav.ps1
 # Version 1.0
-# Documentation can be found under Team Document's Client Onboarding&Reporting
+# Windows widget that provides quick access to a folder/files or trigger a script
 # Link: 
 # Last modified on: May 25, 2018
 
@@ -194,6 +194,7 @@ $buttonC6.AutoSize = $true
 $Form.Controls.Add($buttonC6)
 
 #ALIAS FUNCTIONS
+#################Implement the event handlers here#############
 function Open-Model  {
      try {
          Invoke-Item -ErrorAction 'Stop' -Path "fgggggggg" 
